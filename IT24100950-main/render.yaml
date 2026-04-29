@@ -1,0 +1,15 @@
+services:
+  - name: item-manager-backend
+    github:
+      repo: Chrishean/IT24100950
+      branch: main
+    buildCommand: npm install
+    startCommand: npm run start
+    envVars:
+      - key: PORT
+        value: "5000"
+      - key: MONGO_URI
+        value: mongodb+srv://cvideshana_db_user:chrishean123@cluster0.2isaqwd.mongodb.net/?appName=Cluster0
+      - key: NODE_VERSION
+        value: "20"
+    autoDeploy: true
